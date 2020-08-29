@@ -1,0 +1,21 @@
+import numpy as np
+
+matrix =[[10,20,30],[30,4,5],[10,6,70]]     #Matrix Created
+
+matrix =np.array(matrix)           #Converted list into numpy array
+
+matrix.min()           #Minimum element of numpy array
+
+
+result = np.where(matrix ==matrix.min())   ##finding the location of min element in matrix array
+
+min_index =list(zip(result[0],result[1]))     #min_index : index of the minimum element
+
+min_index[0][1]                               #Printing the value in int form
+
+l2 = []                                     
+for i in matrix:
+    l2.append(i[min_index[0][1]])                 #Now appending the values into list l2
+                                                 #at min_index[0][1] location of each elemtent of the matrix
+
+np.max(l2)                                     #printing the max value of l2 list
